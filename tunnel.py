@@ -55,7 +55,7 @@ class Server(Tunnel):
         try:
             packet = icmp.ICMPPacket.parse(packet)
         except ValueError:
-            print "Malformated packet"
+            print("Malformated packet")
             return
         self.source = addr[0]
         self.dest = packet.dest
